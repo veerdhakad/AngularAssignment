@@ -1,0 +1,12 @@
+<p>
+  Account Number:<input type="txtAccNo" #accno />
+  <button (click)="searchAccount(accno,Name,addrS,amt)">Search Account</button>
+<br>
+ Name:<input type="txtName" #Name /><br>
+ Address:<input type="txtCat" #addrS /><br>
+ Opening Amount:<input type="txtPrice" #amt /><br>
+<button (click)="newAccount(accno,Name,addrS,amt)">Creat Account</button>
+</p>
+<li *ngFor ="let a of allAcc">
+  {{a.accountNumber}}::{{a.accontHolderName}}::{{a.address}}::{{a.currentAmount}}
+</li>
